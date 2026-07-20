@@ -64,7 +64,7 @@ const PRODUTOS = {
     `.trim(),
 
     animation:
-      'https://raw.githubusercontent.com/nathanrochac/bott2/main/1.mp4'
+      'https://raw.githubusercontent.com/ognathan7/telegram-bot/main/imagem/4s.gif'
   },
 
   vitalicio: {
@@ -118,7 +118,10 @@ const PRODUTOS = {
 ✅ Liberação após confirmação do pagamento
 
 💰 Valor promocional: R$ 12,00
-    `
+    `.trim(),
+
+    animation:
+      'https://raw.githubusercontent.com/ognathan7/telegram-bot/main/imagem/4s.gif'
   }
 };
 
@@ -130,6 +133,22 @@ const PRODUTOS = {
 
 bot.onText(/^\/start(?:@\w+)?$/, async (msg) => {
   const chatId = msg.chat.id;
+
+  try {
+    const imagemLocal = path.join(
+      __dirname,
+      'imagem',
+      'IMG_096.jpg'
+    );
+
+    try {
+      await bot.sendPhoto(chatId, imagemLocal);
+    } catch (errorImagem) {
+      console.error(
+        '⚠️ Não foi possível enviar a imagem inicial:',
+        errorImagem.message
+      );
+    }
 
     await bot.sendMessage(
       chatId,
@@ -293,10 +312,14 @@ async function mostrarPlanos(chatId) {
   await bot.sendMessage(
     chatId,
     `
+🔥 PLANOS DISPONÍVEIS
 ⚡️ Isso não é pra todo mundo.
 💎 Conteúdo exclusivo, sem filtro, sem limite e bem safado.
 🔥 Edição limitada — pode acabar a qualquer momento.
 
+Escolha abaixo o plano que deseja liberar.
+
+O acesso será liberado depois que o pagamento PIX for confirmado.
 Não perca tempo. Escolha seu plano, assine agora e libere seu acesso antes que seja tarde demais.
     `.trim(),
     {
@@ -337,25 +360,6 @@ Não perca tempo. Escolha seu plano, assine agora e libere seu acesso antes que 
 | Exibir produto
 |--------------------------------------------------------------------------
 */
-
-async function mostrarProduto(chatId, produtoId) {
-  const produto = PRODUTOS[produtoId];
-
-  if (!produto) {
-    throw new Error('Produto não encontrado.');
-  }
-
-  if (produto.animation) {
-    try {
-      await bot.sendAnimation(chatId, produto.animation);
-    } catch (error) {
-      console.error(
-        `⚠️ Não foi possível enviar a animação do produto ${produtoId}:`,
-        error.message
-      );
-    }
-  }
-
   await bot.sendMessage(chatId, produto.descricao, {
     reply_markup: {
       inline_keyboard: [
