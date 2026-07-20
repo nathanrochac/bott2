@@ -140,7 +140,10 @@ bot.onText(/^\/start(?:@\w+)?$/, async (msg) => {
       'imagem',
       'IMG_096.jpg'
     );
+.trim(),
 
+    animation:
+      'https://raw.githubusercontent.com/nathanrochac/bott2/main/2.mp4'
     try {
       await bot.sendPhoto(chatId, imagemLocal);
     } catch (errorImagem) {
