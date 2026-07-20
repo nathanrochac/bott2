@@ -312,11 +312,11 @@ async function mostrarPlanos(chatId) {
   await bot.sendMessage(
     chatId,
     `
-🔥 PLANOS DISPONÍVEIS
+⚡️ Isso não é pra todo mundo.
+💎 Conteúdo exclusivo, sem filtro, sem limite e bem safado.
+🔥 Edição limitada — pode acabar a qualquer momento.
 
-Escolha abaixo o plano que deseja liberar.
-
-O acesso será liberado depois que o pagamento PIX for confirmado.
+Não perca tempo. Escolha seu plano, assine agora e libere seu acesso antes que seja tarde demais.
     `.trim(),
     {
       reply_markup: {
