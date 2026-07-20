@@ -130,14 +130,6 @@ const PRODUTOS = {
 
 bot.onText(/^\/start(?:@\w+)?$/, async (msg) => {
   const chatId = msg.chat.id;
-  
-  try{
-    // Primeiro envia o video
-    const videoLocal = path.join(__dirname,
-                                'imagem',
-                                 'video.mp4');
-    await bot.sendVideo(chatId, videolocal, {
-      supports_streaming: true});
 
     await bot.sendMessage(
       chatId,
