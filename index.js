@@ -140,18 +140,12 @@ bot.onText(/^\/start(?:@\w+)?$/, async (msg) => {
       'imagem',
       'IMG_096.jpg'
     );
-.trim(),
 
-    animation:
-      'https://raw.githubusercontent.com/nathanrochac/bott2/main/2.mp4'
-    try {
-      await bot.sendPhoto(chatId, imagemLocal);
-    } catch (errorImagem) {
-      console.error(
-        '⚠️ Não foi possível enviar a imagem inicial:',
-        errorImagem.message
+    const videoLocal = patch.join(
+      __dirname,
+      'video',
+      '2.mp4'
       );
-    }
 
     await bot.sendMessage(
       chatId,
