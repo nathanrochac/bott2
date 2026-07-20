@@ -4,7 +4,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const QRCode = require('qrcode');
 const path = require('path');
 
-const { gerarPix, verificarPagamento } = require('./sync');
+const { gerarPix, verificarPagamento } = require('./syncpay');
 
 /*
 |--------------------------------------------------------------------------
