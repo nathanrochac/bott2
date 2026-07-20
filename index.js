@@ -141,11 +141,10 @@ bot.onText(/^\/start(?:@\w+)?$/, async (msg) => {
       'IMG_096.jpg'
     );
 
-    const videoLocal = patch.join(
-      __dirname,
-      'video',
-      '2.mp4'
-      );
+    .trim(),
+
+    animation:
+      'https://raw.githubusercontent.com/ognathan7/telegram-bot/main/imagem/4s.gif'
 
     await bot.sendMessage(
       chatId,
