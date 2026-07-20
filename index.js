@@ -118,10 +118,7 @@ const PRODUTOS = {
 ✅ Liberação após confirmação do pagamento
 
 💰 Valor promocional: R$ 12,00
-    `.trim(),
-
-    animation:
-      'https://raw.githubusercontent.com/ognathan7/telegram-bot/main/imagem/4s.gif'
+    `
   }
 };
 
