@@ -64,7 +64,7 @@ const PRODUTOS = {
     `.trim(),
 
     animation:
-      'https://raw.githubusercontent.com/ognathan7/telegram-bot/main/imagem/4s.gif'
+      'https://raw.githubusercontent.com/nathanrochac/bott2/main/1.mp4'
   },
 
   vitalicio: {
