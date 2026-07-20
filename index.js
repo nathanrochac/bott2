@@ -131,18 +131,6 @@ const PRODUTOS = {
 bot.onText(/^\/start(?:@\w+)?$/, async (msg) => {
   const chatId = msg.chat.id;
 
-  try {
-    const imagemLocal = path.join(
-      __dirname,
-      'imagem',
-      'IMG_096.jpg'
-    );
-
-    .trim(),
-
-    animation:
-      'https://raw.githubusercontent.com/ognathan7/telegram-bot/main/imagem/4s.gif'
-
     await bot.sendMessage(
       chatId,
       `
